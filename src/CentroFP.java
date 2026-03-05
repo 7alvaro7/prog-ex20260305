@@ -68,5 +68,16 @@ public class CentroFP {
 
         return true;
     }
+    /**
+     * Mostramos todos los alumnos registrados recorriendo el array y solo mostrando los que no son igual a null , es decir los que estan registrados
+     */
+    public void mostrarAlumnos() {
+        for (int i = 0; i < alumnos.length; i++) {
+
+            if (alumnos[i] != null) { //solo muestro si hay alumno es decir si es distinto de null
+                System.out.println(alumnos[i]);
+            }
+        }
+    }
 
 }
