@@ -13,5 +13,22 @@ public class Main {
         centro.registrarAlumno(a2);
         centro.registrarAlumno(a3);
 
+        System.out.println("Lista de alumnos:");
+        centro.mostrarAlumnos();
+
+
+        System.out.println("Total alumnos: " + centro.contarAlumnos());
+
+        Alumno encontrado = centro.buscarAlumno(2);
+
+        if (encontrado != null) {
+            System.out.println("Alumno encontrado: " + encontrado);
+        }
+
+        Alumno noEncontrado = centro.buscarAlumno(10);
+
+        if (noEncontrado == null) {
+            System.out.println("Alumno no existente");
+        }
     }
 }
