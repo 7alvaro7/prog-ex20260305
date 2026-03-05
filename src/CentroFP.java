@@ -80,4 +80,20 @@ public class CentroFP {
         }
     }
 
+    /**
+     * Muestro cuantos alumnos hay registrados recorriendo el array desde 0 y cada vez que el hueco es distinto a null es decir que hay un alumno registrado va sumando 1.
+     *
+     * @return número total de alumnos registrados
+     */
+    public int contarAlumnos() {
+        int contador = 0;
+
+        for (int i = 0; i < alumnos.length; i++) {
+            if (alumnos[i] != null) {
+                contador++;// aumento el contador si la posicion tiene un alumno
+            }
+        }
+
+        return contador;
+    }
 }
