@@ -29,4 +29,24 @@ public class CentroFP {
         return null;
     }
 
+
+
+        /**
+         * Buscamos la primera posicion libre
+         *
+         * @return Donde esta la primera posicion libre o -1 si esta ocupado
+         */
+
+        private int buscarPrimerHuecoLibre() {
+            for (int i = 0; i < alumnos.length; i++) {
+
+                if (alumnos[i] == null) {
+                    return i;
+                }
+            }
+
+            return -1;
+        }
+
+
 }
