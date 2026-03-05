@@ -47,6 +47,26 @@ public class CentroFP {
 
             return -1;
         }
+    /**
+     * Añadimos alumnos en el centro
+     *
+     * @param alumno , Alumno que se quiere registrar
+     * @return true si se pudo registrar, false si no se pudo
+     */
 
+    public boolean registrarAlumno(Alumno alumno) {
+        if (buscarAlumno(alumno.getId()) != null) {
+            return false;
+        }
+
+        int posicion = buscarPrimerHuecoLibre();
+        if (posicion == -1) {
+            return false;// si no hay hueco en el array
+        }
+
+        alumnos[posicion] = alumno; // guardo el alumno
+
+        return true;
+    }
 
 }
